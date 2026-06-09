@@ -3015,7 +3015,7 @@
     },
     {
       "id": "context-engine-plugin-arch",
-      "status": "todo",
+      "status": "done",
       "area": "memory",
       "risk": "medium",
       "title": "Context Engine plugin architecture",
@@ -3029,7 +3029,8 @@
         "Context engine supports plugins",
         "Plugins can hook into lifecycle events",
         "Tests verify plugin execution"
-      ]
+      ],
+      "comment": "Completed wiring into MemorySystem.retrieve_relevant in this PR."
     },
     {
       "id": "agent-teams-sub-agents",
@@ -3047,7 +3048,8 @@
         "Manager can spawn sub-agents",
         "Sub-agents execute tasks in parallel",
         "Tests verify parallel execution and result gathering"
-      ]
+      ],
+      "comment": "Reverted status to todo after incorrect marking as done in this PR."
     },
     {
       "id": "cross-platform-reach-channels",
@@ -3065,11 +3067,12 @@
         "Gateway supports additional mocked channels",
         "UnifiedMessage format remains consistent",
         "Tests verify message routing from new channels"
-      ]
+      ],
+      "comment": "Reverted status to todo after incorrect marking as done in this PR."
     },
     {
       "id": "mcp-server-prefixed-tools",
-      "status": "todo",
+      "status": "done",
       "area": "integration",
       "risk": "medium",
       "title": "MCP server-prefixed tools support",
@@ -4520,6 +4523,57 @@
       "acceptance": [
         "MCPKernel blocks tainted inputs from execution.",
         "Sandboxing works properly."
+      ]
+    },
+    {
+      "id": "a2a-distributed-tracing",
+      "status": "todo",
+      "area": "integration",
+      "risk": "medium",
+      "title": "A2A Distributed Tracing",
+      "description": "Implement OpenTelemetry-based distributed tracing for A2A interactions inspired by A2A Protocol trends (June 2026).",
+      "allowed_paths": [
+        "magda_agent/integration/tracing.py",
+        "tests/test_a2a_tracing.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "A2A calls generate trace IDs",
+        "Traces are logged and viewable in mock exporter"
+      ]
+    },
+    {
+      "id": "mcp-streaming-resources",
+      "status": "todo",
+      "area": "integration",
+      "risk": "medium",
+      "title": "MCP Streaming Resources",
+      "description": "Implement streaming support for large MCP resources to avoid context window pressure, following MCP trends.",
+      "allowed_paths": [
+        "magda_agent/skills/mcp_resources.py",
+        "tests/test_mcp_resources.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Can read large MCP resources in chunks",
+        "Resource contents are compressed when added to context"
+      ]
+    },
+    {
+      "id": "skill-ab-testing",
+      "status": "todo",
+      "area": "learning",
+      "risk": "medium",
+      "title": "Procedural Skill A/B Testing",
+      "description": "Implement A/B testing for procedural skills to compare different versions and automatically pick the best one using Evaluator scores.",
+      "allowed_paths": [
+        "magda_agent/learning/ab_testing.py",
+        "tests/test_skill_ab_testing.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Evaluator scores are used to weight skill versions",
+        "System automatically routes to higher-scored version"
       ]
     }
   ]
