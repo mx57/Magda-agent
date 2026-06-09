@@ -111,8 +111,8 @@
 * [x] FEATURE: A2A Peer-to-Peer Task Delegation
 * [x] MODULE: **Context Engine Plugin Architecture** — модуль `magda_agent/memory/context_engine.py`. (2026-06-07)
 * [ ] FEATURE: Cross-platform reach across channels (cross-platform-reach-channels)
-* [ ] FEATURE: Agent Teams sub-agents spawning (agent-teams-sub-agents)
-  Inspired by trend #4 in docs/trends.md: Implement a plugin architecture for the Context Engine to manage context dynamically using lifecycle hooks.
+* [x] FEATURE: Agent Teams sub-agents spawning (agent-teams-sub-agents). (2026-06-11)
+  Inspired by trend 'Agent Teams — порождение sub-agents для параллельных задач': Enable the Planner/Manager to spawn isolated sub-agents for parallel task execution.
 * [x] FEATURE: Agent Team Delegation Protocol (agent-team-delegation-protocol)
 * [x] FEATURE: Online RL from User Feedback (online-rl-feedback-loop)
 * [x] FEATURE: MCP Tools Integration Engine (mcp-tools-integration-v2)
@@ -123,6 +123,9 @@
 - [x] openclaw-rl-interactive-learning-v3: OpenClaw-RL Interactive Learning
 * [x] FEATURE: MCP Action Tools Expansion (mcp-action-tools-v3)
 * [x] FEATURE: A2A Task Delegation (v3)
+* [ ] FEATURE: Multi-agent worktree merging strategy (multi-agent-worktree-merging)
+* [ ] FEATURE: Hierarchical sub-agent teams delegation (hierarchical-sub-agent-teams)
+* [ ] FEATURE: Automated skill documentation from sub-agent trajectories (automated-skill-documentation)
 * [x] FEATURE: Longitudinal Quality Metrics CLI
 * [x] FEATURE: Agent Skills MCP Export Enhancements (agent-skills-mcp-export)
 * [x] FEATURE: Multi-Channel Skills Sync (2026-06-XX)
