@@ -3034,7 +3034,7 @@
     },
     {
       "id": "agent-teams-sub-agents",
-      "status": "done",
+      "status": "todo",
       "area": "multi-agent",
       "risk": "high",
       "title": "Agent Teams sub-agents spawning",
@@ -3053,7 +3053,7 @@
     },
     {
       "id": "cross-platform-reach-channels",
-      "status": "done",
+      "status": "todo",
       "area": "gateway",
       "risk": "low",
       "title": "Cross-platform reach across channels",
