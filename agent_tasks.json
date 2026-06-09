@@ -3034,7 +3034,7 @@
     },
     {
       "id": "agent-teams-sub-agents",
-      "status": "todo",
+      "status": "done",
       "area": "multi-agent",
       "risk": "high",
       "title": "Agent Teams sub-agents spawning",
@@ -3049,7 +3049,64 @@
         "Sub-agents execute tasks in parallel",
         "Tests verify parallel execution and result gathering"
       ],
-      "comment": "Reverted status to todo after incorrect marking as done in this PR."
+      "comment": "Implemented TeamManager with parallel spawning, concurrency limits, and error handling."
+    },
+    {
+      "id": "multi-agent-worktree-merging",
+      "status": "todo",
+      "area": "multi-agent",
+      "risk": "high",
+      "title": "Multi-agent worktree merging strategy",
+      "description": "Inspired by Claude Agent SDK: Implement a robust merging strategy for sub-agents working in isolated git worktrees. Support conflict detection and resolution when merging results back to the main branch.",
+      "allowed_paths": [
+        "magda_agent/agents/teams.py",
+        "magda_agent/isolation/git_worktree.py",
+        "tests/test_worktree_merging*.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "TeamManager can merge changes from multiple worktrees.",
+        "System detects and reports merge conflicts.",
+        "Tests verify successful merge and conflict scenarios."
+      ]
+    },
+    {
+      "id": "hierarchical-sub-agent-teams",
+      "status": "todo",
+      "area": "multi-agent",
+      "risk": "high",
+      "title": "Hierarchical sub-agent teams delegation",
+      "description": "Inspired by OpenAI Agents SDK: Enable sub-agents to spawn their own sub-agents (nested delegation). Maintain a hierarchical context and execution trace across the agent tree.",
+      "allowed_paths": [
+        "magda_agent/agents/sub_agent.py",
+        "magda_agent/agents/teams.py",
+        "tests/test_hierarchical_teams*.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Sub-agents can successfully spawn nested sub-agents.",
+        "Context and results propagate up the tree correctly.",
+        "Tests verify nesting levels and context integrity."
+      ]
+    },
+    {
+      "id": "automated-skill-documentation",
+      "status": "todo",
+      "area": "learning",
+      "risk": "low",
+      "title": "Automated skill documentation from sub-agent trajectories",
+      "description": "Inspired by Hermes Agent trend: Automatically generate documentation and usage examples for newly created skills based on the execution trajectories and logs of successful sub-agent tasks.",
+      "allowed_paths": [
+        "magda_agent/learning/skill_creator.py",
+        "magda_agent/learning/docs_generator.py",
+        "tests/test_skill_docs*.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Successful sub-agent runs trigger documentation generation.",
+        "Documentation includes description, parameter types, and example usage.",
+        "Tests verify documentation accuracy against execution logs."
+      ]
     },
     {
       "id": "cross-platform-reach-channels",
@@ -4557,23 +4614,6 @@
       "acceptance": [
         "Can read large MCP resources in chunks",
         "Resource contents are compressed when added to context"
-      ]
-    },
-    {
-      "id": "skill-ab-testing",
-      "status": "todo",
-      "area": "learning",
-      "risk": "medium",
-      "title": "Procedural Skill A/B Testing",
-      "description": "Implement A/B testing for procedural skills to compare different versions and automatically pick the best one using Evaluator scores.",
-      "allowed_paths": [
-        "magda_agent/learning/ab_testing.py",
-        "tests/test_skill_ab_testing.py",
-        "agent_tasks.json"
-      ],
-      "acceptance": [
-        "Evaluator scores are used to weight skill versions",
-        "System automatically routes to higher-scored version"
       ]
     }
   ]
