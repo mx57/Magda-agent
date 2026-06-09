@@ -110,6 +110,8 @@
 * [x] MODULE: **Agent Teams Git Worktree Isolation** — модуль `magda_agent/agents/team_isolation.py`. (2026-06-07)
 * [x] FEATURE: A2A Peer-to-Peer Task Delegation
 * [x] MODULE: **Context Engine Plugin Architecture** — модуль `magda_agent/memory/context_engine.py`. (2026-06-07)
+* [ ] FEATURE: Cross-platform reach across channels (cross-platform-reach-channels)
+* [ ] FEATURE: Agent Teams sub-agents spawning (agent-teams-sub-agents)
   Inspired by trend #4 in docs/trends.md: Implement a plugin architecture for the Context Engine to manage context dynamically using lifecycle hooks.
 * [x] FEATURE: Agent Team Delegation Protocol (agent-team-delegation-protocol)
 * [x] FEATURE: Online RL from User Feedback (online-rl-feedback-loop)
@@ -167,6 +169,7 @@
 * [ ] FEATURE: OpenClaw Canvas Live Visualization
 * [ ] FEATURE: OpenClaw RL Next-State Signals
 * [ ] FEATURE: Claude Subagent Spawning
+* [x] FEATURE: MCP server-prefixed tools support (mcp-server-prefixed-tools) (2026-06-11)
 
 * [x] SKILL: **Omnichannel Provider (Работа с провайдерами)** — модуль `magda_agent/skills/omnichannel.py`. (2026-06-04)
   Умение работы с разными провайдерами (Telegram, WhatsApp и другие) для взаимодействия с агентом.

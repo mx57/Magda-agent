@@ -148,6 +148,21 @@ class MemorySystem:
         """
         try:
             u_id = user_id if user_id is not None else -1
+
+            if self.context_engine:
+                def base_retrieval(q: str, uid: int) -> List[MemoryEntry]:
+                    return self._base_retrieve_relevant(q, limit, uid)
+                return self.context_engine.retrieve_context(query, u_id, base_retrieval)
+
+            return self._base_retrieve_relevant(query, limit, u_id)
+
+        except Exception as e:
+            logging.error(f"Failed to retrieve relevant memories: {e}")
+            return []
+
+    def _base_retrieve_relevant(self, query: str, limit: int = 5, u_id: int = -1) -> List[MemoryEntry]:
+        """Base retrieval logic without plugin hooks."""
+        try:
             entries = self.working_memory.get_entries(u_id)
 
             if not entries:
@@ -180,7 +195,7 @@ class MemorySystem:
             return [e[1] for e in scored_entries[:limit]]
 
         except Exception as e:
-            logging.error(f"Failed to retrieve relevant memories: {e}")
+            logging.error(f"Failed in _base_retrieve_relevant: {e}")
             return []
 
     def _calc_emotional_intensity(self, state: PADState) -> float:
