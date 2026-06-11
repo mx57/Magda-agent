@@ -23,6 +23,6 @@ async def test_team_manager_spawn_and_execute() -> None:
 
         assert results == ["Result 1", "Result 2"]
         assert MockSubAgent.call_count == 2
-        MockSubAgent.assert_called_with(llm=llm_mock, use_isolation=True)
+        MockSubAgent.assert_called_with(llm=llm_mock, use_isolation=True, cleanup=True)
         sub_mock_1.execute.assert_awaited_once_with(task="Task 1", context="Base context")
         sub_mock_2.execute.assert_awaited_once_with(task="Task 2", context="Base context")

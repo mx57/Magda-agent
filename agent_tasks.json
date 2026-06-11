@@ -3053,7 +3053,7 @@
     },
     {
       "id": "multi-agent-worktree-merging",
-      "status": "todo",
+      "status": "done",
       "area": "multi-agent",
       "risk": "high",
       "title": "Multi-agent worktree merging strategy",
@@ -3061,6 +3061,7 @@
       "allowed_paths": [
         "magda_agent/agents/teams.py",
         "magda_agent/isolation/git_worktree.py",
+        "magda_agent/agents/sub_agent.py",
         "tests/test_worktree_merging*.py",
         "agent_tasks.json"
       ],
@@ -3068,6 +3069,60 @@
         "TeamManager can merge changes from multiple worktrees.",
         "System detects and reports merge conflicts.",
         "Tests verify successful merge and conflict scenarios."
+      ]
+    },
+    {
+      "id": "a2a-agent-card-registry",
+      "status": "todo",
+      "area": "multi-agent",
+      "risk": "medium",
+      "title": "A2A Agent Card Registry",
+      "description": "Implement a persistent registry for discovered A2A Agent Cards. Enables faster delegation and capability-based routing without re-discovery.",
+      "allowed_paths": [
+        "magda_agent/integration/a2a_registry.py",
+        "tests/test_a2a_registry.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Cards are stored and retrieved from a persistent store.",
+        "Registry supports expiry and manual refresh.",
+        "Tests verify discovery-to-registry flow."
+      ]
+    },
+    {
+      "id": "dynamic-guardrail-synthesis",
+      "status": "todo",
+      "area": "safety",
+      "risk": "high",
+      "title": "Dynamic Guardrail Synthesis",
+      "description": "Inspired by ACS standard: Implement a background loop that analyzes episodic memory for near-miss safety incidents and proposes new guardrail rules.",
+      "allowed_paths": [
+        "magda_agent/safety/synthesis.py",
+        "tests/test_guardrail_synthesis.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Proposed guardrails are stored in a draft state for human review.",
+        "Synthesis module uses LLM to identify patterns from failed or blocked actions.",
+        "Tests mock history and verify rule proposal."
+      ]
+    },
+    {
+      "id": "mcp-skill-discovery-import",
+      "status": "todo",
+      "area": "integration",
+      "risk": "medium",
+      "title": "MCP Skill Discovery and Import",
+      "description": "Allow Magda to discover MCP-compatible tools from other agents via A2A and dynamically wrap them as internal procedural memory skills.",
+      "allowed_paths": [
+        "magda_agent/skills/mcp_import.py",
+        "tests/test_mcp_import.py",
+        "agent_tasks.json"
+      ],
+      "acceptance": [
+        "Agent can query a peer for its MCP tools.",
+        "Discovered tools can be called as if they were local skills.",
+        "Tests mock peer MCP response."
       ]
     },
     {
