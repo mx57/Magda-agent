@@ -123,9 +123,12 @@
 - [x] openclaw-rl-interactive-learning-v3: OpenClaw-RL Interactive Learning
 * [x] FEATURE: MCP Action Tools Expansion (mcp-action-tools-v3)
 * [x] FEATURE: A2A Task Delegation (v3)
-* [ ] FEATURE: Multi-agent worktree merging strategy (multi-agent-worktree-merging)
+* [x] FEATURE: Multi-agent worktree merging strategy (multi-agent-worktree-merging). (2026-06-11)
 * [ ] FEATURE: Hierarchical sub-agent teams delegation (hierarchical-sub-agent-teams)
 * [ ] FEATURE: Automated skill documentation from sub-agent trajectories (automated-skill-documentation)
+* [ ] FEATURE: A2A Agent Card Registry (a2a-agent-card-registry)
+* [ ] FEATURE: Dynamic Guardrail Synthesis (dynamic-guardrail-synthesis)
+* [ ] FEATURE: MCP Skill Discovery and Import (mcp-skill-discovery-import)
 * [x] FEATURE: Longitudinal Quality Metrics CLI
 * [x] FEATURE: Agent Skills MCP Export Enhancements (agent-skills-mcp-export)
 * [x] FEATURE: Multi-Channel Skills Sync (2026-06-XX)
